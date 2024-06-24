@@ -1,0 +1,4 @@
+remove-google-analytics.patch
+move_theme.patch
+package-missing-files.patch
+sphinx-2.4-compatibility.patch
