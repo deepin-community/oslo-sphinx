@@ -1,0 +1,18 @@
+Description: Move theme to /usr/share
+Author: Ondřej Nový <onovy@debian.org>
+Forwarded: not-needed
+Last-Update: 2016-07-16
+
+Index: oslo-sphinx/oslosphinx/__init__.py
+===================================================================
+--- oslo-sphinx.orig/oslosphinx/__init__.py
++++ oslo-sphinx/oslosphinx/__init__.py
+@@ -72,7 +72,7 @@ def _get_other_versions(app):
+ 
+ 
+ def builder_inited(app):
+-    theme_dir = os.path.join(os.path.dirname(__file__), 'theme')
++    theme_dir = os.path.join(os.sep, 'usr', 'share', 'oslosphinx')
+     app.info('Using openstack theme from %s' % theme_dir)
+     # Insert our theme directory at the front of the search path and
+     # force the theme setting to use the one in the package unless
